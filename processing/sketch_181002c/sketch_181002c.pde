@@ -4,7 +4,7 @@ Ball ball;
 void setup() {
   size(600, 600);
   noStroke();
-  ball = new Ball(100, 100);
+  ball = new Ball(random(0,width), random(0,height));
 }
 
 void draw() {
@@ -12,15 +12,15 @@ void draw() {
   ball.draw();
   
   
-  if(ball.pos.x > width) {
+  if(ball.pos.x > width-ball.radius/2) {
     ball.vel.x *= -1;
-  } else if(ball.pos.x < 0) {
+  } else if(ball.pos.x < ball.radius/2) {
     ball.vel.x *= -1;
   }
   
-  if(ball.pos.y > height) {
+  if(ball.pos.y > height-ball.radius/2) {
     ball.vel.y *= -1;
-  } else if(ball.pos.y < 0) {
+  } else if(ball.pos.y < ball.radius/2) {
     ball.vel.y *= -1;
   }
   

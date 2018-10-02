@@ -1,8 +1,8 @@
 class Ball {
   PVector pos, vel;
-  int radius = 50;
+  int radius = 40;
   
-  Ball(int x, int y){
+  Ball(float x, float y){
      pos = new PVector(x, y);
      vel = new PVector(2,2);
   }
@@ -17,7 +17,7 @@ class Ball {
       } else {
         fill(20, 20, 255);
       }
-      ellipse(pos.x, pos.y, radius-i*5, radius-i*5);
+      ellipse(pos.x, pos.y, radius-i*4, radius-i*4);
     }
   }
   
